@@ -25,11 +25,6 @@ async def on_member_join(member):
 async def on_member_remove(member):
     print(f'{member} has left a server.')
 
-# Passing context into function command
-@client.command()
-async def ping(ctx):
-    await ctx.send(f'Your ping is {round(client.latency * 1000)} ms')
-
 @client.command(aliases = ['cases', 'covid19'])
 async def covid(ctx):
     
